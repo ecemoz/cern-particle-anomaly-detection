@@ -1,0 +1,7 @@
+Dosya yapısı kafamdaki ;
+data/raw/ → CERN’den indirdiğin dokunulmamış ROOT/JSON dosyaları
+data/processed/ → Temizlenmiş tablo veriler (Parquet/CSV)
+data/features/ → ML için ürettiğin özellik tabloları
+notebooks/ → deneme & keşif için Jupyter notebook’lar
+scripts/ → daha “production” kafasıyla çalışan .py script’ler
+
