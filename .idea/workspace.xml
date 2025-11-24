@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32fbb69-1f6e-4970-a989-9edda1d2587c" name="Changes" comment="feat: add comprehensive anomaly analysis pipeline with physics-aware visualizations (pt/eta/mass), scatter plots, and PCA validation&#10;&#10;This commit adds the full anomaly analysis step:&#10;&#10;Loaded model outputs and separated normal vs anomaly sets&#10;&#10;Implemented pt1, eta1, and invariant mass (M) distribution comparisons&#10;&#10;Added pt1 vs M scatter plot to inspect multi-feature deviation&#10;&#10;Added PCA 2D embedding for dimensionality reduction and anomaly separation&#10;&#10;Verified that anomalies form clear clusters apart from normal muon events&#10;&#10;Updated 03_anomaly_analysis.ipynb with structured workflow and explanations&#10;&#10;This closes the analysis phase and provides strong visual + statistical evidence for meaningful anomaly detection in the dimuon dataset.">
-      <change afterPath="$PROJECT_DIR$/notebooks/04_anomaly_detection_autoencoder.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d32fbb69-1f6e-4970-a989-9edda1d2587c" name="Changes" comment="Implement PCA projection of AE anomalies and extend anomaly interpretation with reconstruction-error analysis.">
+      <change afterPath="$PROJECT_DIR$/notebooks/05_anomaly_ensemble.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1763551857686" duration="6719000" />
       <workItem from="1763718880552" duration="9495000" />
       <workItem from="1763969102130" duration="3458000" />
-      <workItem from="1763972572993" duration="1821000" />
+      <workItem from="1763972572993" duration="5362000" />
     </task>
     <task id="LOCAL-00001" summary="Datas are added for the project.">
       <option name="closed" value="true" />
@@ -113,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763970760949</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement PCA projection of AE anomalies and extend anomaly interpretation with reconstruction-error analysis.">
+      <option name="closed" value="true" />
+      <created>1763974429868</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763974429868</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +142,7 @@
     <MESSAGE value="feat: build initial data processing pipeline and create Spark-ready data lake&#10;&#10;Details:&#10;&#10;Added raw CSV ingestion and created a cleaned processed dataset (dimuon_processed.parquet)&#10;&#10;Performed feature engineering and generated ML-ready feature set (dimuon_features.parquet)&#10;&#10;Implemented directory structure for project (data/raw, data/processed, data/features, docs, notebooks)&#10;&#10;Created Spark-compatible partitioned data lake&#10;&#10;spark/event_type=dimuon/energy=7/part-0000.parquet&#10;&#10;Added exploratory analysis notebook with invariant mass histogram (J/ψ and Z peaks visible)&#10;&#10;Prepared dataset for downstream ML anomaly detection and streaming pipeline" />
     <MESSAGE value="feat(data+ml): finalize dimuon ETL, feature set, spark partitions and anomaly scoring&#10;&#10;Data Engineering:&#10;- structured data lake: raw → processed → features → spark partitions&#10;- saved processed dataset to parquet&#10;- generated partitioned layout event_type=dimuon/energy=7&#10;&#10;Feature Engineering:&#10;- selected 11 physics-informed features for ML&#10;- exported ML-ready feature set to parquet&#10;&#10;ML / Anomaly Detection:&#10;- trained autoencoder on dimuon feature space&#10;- computed anomaly_score and anomaly_label&#10;- visualized mass spectrum (normal vs anomaly)&#10;&#10;Output:&#10;- saved final anomaly results parquet&#10;- code structured for next stage: anomaly analysis &amp; model refinement" />
     <MESSAGE value="feat: add comprehensive anomaly analysis pipeline with physics-aware visualizations (pt/eta/mass), scatter plots, and PCA validation&#10;&#10;This commit adds the full anomaly analysis step:&#10;&#10;Loaded model outputs and separated normal vs anomaly sets&#10;&#10;Implemented pt1, eta1, and invariant mass (M) distribution comparisons&#10;&#10;Added pt1 vs M scatter plot to inspect multi-feature deviation&#10;&#10;Added PCA 2D embedding for dimensionality reduction and anomaly separation&#10;&#10;Verified that anomalies form clear clusters apart from normal muon events&#10;&#10;Updated 03_anomaly_analysis.ipynb with structured workflow and explanations&#10;&#10;This closes the analysis phase and provides strong visual + statistical evidence for meaningful anomaly detection in the dimuon dataset." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add comprehensive anomaly analysis pipeline with physics-aware visualizations (pt/eta/mass), scatter plots, and PCA validation&#10;&#10;This commit adds the full anomaly analysis step:&#10;&#10;Loaded model outputs and separated normal vs anomaly sets&#10;&#10;Implemented pt1, eta1, and invariant mass (M) distribution comparisons&#10;&#10;Added pt1 vs M scatter plot to inspect multi-feature deviation&#10;&#10;Added PCA 2D embedding for dimensionality reduction and anomaly separation&#10;&#10;Verified that anomalies form clear clusters apart from normal muon events&#10;&#10;Updated 03_anomaly_analysis.ipynb with structured workflow and explanations&#10;&#10;This closes the analysis phase and provides strong visual + statistical evidence for meaningful anomaly detection in the dimuon dataset." />
+    <MESSAGE value="Implement PCA projection of AE anomalies and extend anomaly interpretation with reconstruction-error analysis." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement PCA projection of AE anomalies and extend anomaly interpretation with reconstruction-error analysis." />
   </component>
 </project>
